@@ -1,5 +1,5 @@
 # FLJA_Algorithm
-플자 소모임 알고리즘 레포지토리
+플자 알고리즘 레포지토리
 
 <a href="https://www.notion.so/hyokikomori/Algorithm-Study-eeab1b7059824f96b2733d6bc7218428?pvs=4">
 <img src="https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-flat&amp;logo=notion&amp;logoColor=white" alt="Notion">
