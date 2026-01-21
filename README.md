@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-flat&amp;logo=notion&amp;logoColor=white" alt="Notion">
 </a>
 
-# 🖥 플자 알고리즘 스터디 - 시즌2
+# 🖥 플자 알고리즘 스터디
 
 <table>
   <tr>
@@ -59,7 +59,7 @@
 <br/>
 
 ## 📌 스터디 규칙
-- 스터디는 매주 수요일 9시 온라인으로 2시간 진행한다.
+- 스터디는 매주 수요일 9~10 시 사이 온라인으로 1~2시간 진행한다.
   - 추가
   - 추가
 - 매주 정해진 개념 공부, 문제(2 ~ 3)문제 풀이.
