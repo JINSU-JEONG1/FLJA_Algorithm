@@ -1,3 +1,8 @@
+# successCount challengeCount 구할때 이중포문으로 돌면은 못품
+# 아래처럼 누적합을 이용 풀이 ㄱㄱ 
+
+
+
 def solution(N, stages):
     successCount = [0]*(N+2)
     challengeCount = [0]*(N+2)
