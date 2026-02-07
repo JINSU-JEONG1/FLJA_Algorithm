@@ -79,50 +79,56 @@
 # 마지막에 end 를 리턴해야 되나 start 를 리턴해야되나 헤깔리는데
 # 오른쪽으로 조이면 마지막에 start에 +1 하자너 그래서 end 리턴
 # 왼쪽으로 조이면 마지막에 end에 +1 해서 start 리턴 하면됨
-def getLastX(array , x) :
+
+
+
+# start 하고 end 하고 같을때 만약에 x값의 원소가 없으면 넘어가는거랑 있으면 교차되는거까지 잘 파악해라
+def getFirstX(array , x):
     start = 0
     end = len(array) -1
+    mid = 0
     while start <= end :
         mid = (start + end) // 2
 
-        if array[mid] > x :
-            end = mid -1
-        elif array[mid] <= x:
-            start = mid + 1
-
-    if array[end] == x:
-        return end
-    else :
-        return -1
-
-
-
-def getFirstX(array , x) :
-    start = 0
-    end = len(array) -1
-    while start <= end :
-        mid = (start + end) // 2
-
-        if array[mid] >= x :
+        if array[mid] >= x:
             end = mid -1
         elif array[mid] < x:
             start = mid + 1
-
-    if array[start] == x:
+    
+    if  start >= 0 and start <= len(array) - 1 and array[start] == x:
         return start
-    else :
+    else:
         return -1
+    
 
+def getLastX(array , x):
+    start = 0
+    end = len(array) -1
+    mid = 0
+    while start <= end :
+        mid = (start + end) // 2
 
-
-
-
-
+        if array[mid] > x:
+            end = mid -1
+        elif array[mid] <= x:
+            start = mid + 1
+    
+    if end >= 0 and end <= len(array) - 1 and array[end] == x:
+        return end
+    else:
+        return -1
+      
 
 
 n , x = map(int, input().split())
 
 list = list(map(int , input().split()))
 
-getLastX(list , x)
 
+firstXIndex = getFirstX(list , x)
+lastXIndex = getLastX(list , x)
+
+if firstXIndex == -1 and lastXIndex == -1:
+    print(-1)
+else:
+    print(lastXIndex - firstXIndex + 1)
