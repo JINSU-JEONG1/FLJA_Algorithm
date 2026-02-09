@@ -56,25 +56,47 @@ def findLastIndex(array , x):
 
 
 
-n = int(input())
+# n = int(input())
 
-array = list(map(int , input().split()))
+# array = list(map(int , input().split()))
 
 
-firstIndex = findFirstIndex(array , 0)
+# firstIndex = findFirstIndex(array , 0)
 
-lastIndex = findLastIndex(array , n -1)
-result = 0
+# lastIndex = findLastIndex(array , n -1)
+# result = 0
 
-if firstIndex != -1 and lastIndex != -1 :
-    for i in range(firstIndex , lastIndex +1):
-        if array[i] == i :
-            result = i
-            break
+# if firstIndex != -1 and lastIndex != -1 :
+#     for i in range(firstIndex , lastIndex +1):
+#         if array[i] == i :
+#             result = i
+#             break
     
-if result == 0 :
-    print(-1)
-else :
-    print(result)
+# if result == 0 :
+#     print(-1)
+# else :
+#     print(result)
          
+
+
+
+
+# 위에 답은 오답 선형 탐색이라 절대 안됨!!!! 이정도하고 선형 하면 되지 않을까?? 라는 생각부터가 안되는거임 기억!!!!!
+
+def fixed_point(arr):
+    start, end = 0, len(arr) - 1
+    while start <= end:
+        mid = (start + end) // 2
+        if arr[mid] == mid:
+            return mid
+        elif arr[mid] < mid:
+            start = mid + 1
+        else:  # arr[mid] > mid
+            end = mid - 1
+    return -1
+
+n = int(input().strip())
+arr = list(map(int, input().split()))
+print(fixed_point(arr))
+
 
