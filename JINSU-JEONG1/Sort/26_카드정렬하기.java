@@ -26,6 +26,8 @@ public class Main {
         System.out.println("테스트 케이스:");
         int answer = 0;
 
+        {1, 100, 100, 100}
+
         // 한묶음일때
         if(N < 2){
             answer = 0cards[0];
